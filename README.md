@@ -36,8 +36,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-## Enhancements (if there was more time)
+## Notes
 
+- Requires .env or .env.local file for the openweathermap api key (for openweathermap api requests)
+
+
+## Enhancements (if there was more time)
 
 #### Code
 - further code splitting into smaller components (eg headings, subheadings, inputs)
