@@ -89,14 +89,20 @@ const WeatherApp: React.FC = () => {
     } catch (error:any) {
       console.error(error);
       setWeatherData(null);
+      setForecastData(null)
       setError(error.message);
     }
   }
   const handleFormSubmit = async (e: FormEvent) => {
     e.preventDefault();
     let weather = await getWeatherData(location)
-    let {lat,lon} = weather.coord;
-    await getForecastData(lat, lon)
+    if (!weather) {
+      return
+    } else {
+      let {lat,lon} = weather.coord;
+      await getForecastData(lat, lon)
+    }
+    
   };
 
 
@@ -111,11 +117,14 @@ const WeatherApp: React.FC = () => {
           <Form 
             submitFunction={handleFormSubmit} 
             onChangeFunction={handleLocationChange}
-            error={error} 
             location={location} 
             inputs={InputArray} 
           />
-
+          {
+            error && (
+              <p className="text-red mt-4 font-semibold">{error}</p>
+            )
+          }
         </div>
         {
           weatherData && (

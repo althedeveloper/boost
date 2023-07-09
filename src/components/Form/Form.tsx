@@ -6,7 +6,6 @@ interface FormProps {
         placeholder: string;
         type: string;
     }>
-    error: string | null;
     location: any | string | null;
     submitFunction(e: FormEvent): any;
     onChangeFunction(e: FormEvent): any;
@@ -32,9 +31,7 @@ const Form = (props:FormProps) => {
             )
         }
         <Button clickFunction={props.submitFunction} text="Search" />
-        {props.error && (
-            <p className="text-red-500 mt-4 font-semibold">{props.error}</p>
-          )}
+        
     </form>
 
   )

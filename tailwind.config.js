@@ -10,7 +10,8 @@ module.exports = {
       'yellow': "#FCD059",
       'darkBlue': "#101039",
       'fadedDarkBlue': "#1B1C48",
-      'white': '#ffffff'
+      'white': '#ffffff',
+      'red': '#EF4444'
     },
     container: {
       center: true,

@@ -16,7 +16,7 @@ interface MiniCardProps {
 const MiniCard = (props:MiniCardProps) => {
 
   return (
-    <div key={props.key} className="bg-fadedDarkBlue text-white md:w-fit flex-col items-center justify-center px-4 py-6 rounded shadow-lg">
+    <div  className="bg-fadedDarkBlue text-white md:w-fit flex-col items-center justify-center px-4 py-6 rounded shadow-lg">
     {`${new Date(props.date * 1000).toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase()}`}
     <div className="flex items-center justify-center">
       <Image
